@@ -1,0 +1,52 @@
+:root {
+  --green: #00ff00;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+/*
+O seletor de :root representa o elemento <html> na página HTML. Para esse tipo de tarefa, 
+uma melhor prática é definir um conjunto de variáveis CSS globais em uma regra CSS com o 
+seletor :root. Neste exemplo, você definiu três variáveis coloridas. Agora você pode usar 
+essas variáveis em outras regras CSS.
+*/
+
+body {
+  background: var(--bg);
+  color: var(--fontColor);
+  font-family: helvetica;
+}
+
+li {
+  list-style: circle;
+}
+
+.list {
+  list-style: square;
+}
+
+.light {
+  --bg: var(--green);
+  --fontColor: var(--black);
+  --btnBg: var(--black);
+  --btnFontColor: var(--white);
+}
+
+.dark {
+  --bg: var(--black);
+  --fontColor: var(--green);
+  --btnBg: var(--white);
+  --btnFontColor: var(--black);
+}
+
+.btn{
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
